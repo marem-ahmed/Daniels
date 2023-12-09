@@ -1,0 +1,597 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root{
+    --main-font: 'Montserrat', sans-serif;
+    --default-font: 'Poppins', sans-serif;;
+}
+.main-font{
+    font-family: var(--main-font);
+
+}
+.default-font{
+    font-family: var(--default-font);
+}
+.bg-text{
+    background-color: #5b5b5b;
+}
+/* ==== STYLE OF Header===> */
+
+header {
+  background-image:url(../imgs/bg.jpg);
+  background-size: cover;
+  background-position: top;
+ 
+}
+.header-layer{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+     display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-content {
+  justify-content: center;
+  align-items: center;
+}
+.header-content h1::after {
+  content: "I AM";
+  width: 25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-50%);
+  animation: typing 15s infinite;
+}
+
+
+.header-icons > * {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(225, 225, 225, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3125rem;
+}
+/* ====style of About=====> */
+.about .hero-img:after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0px;
+    bottom: -1.875rem;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+.about .hero-img::before {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: -1.875rem;
+    bottom: -1.875rem;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+.about-skills > * {
+  height: 1.5625rem;
+  margin-block: 1.875rem;
+}
+.skill {
+  box-shadow: 1px 1px 10px rgb(196, 195, 195) inset;
+}
+.skill1 .skill-layer {
+  width: 95%;
+    animation: loadingSkill1 2s;
+
+}
+.skill2 .skill-layer {
+     width: 80%;
+    animation: loadingSkill2 2s;
+
+  
+}
+.skill3 .skill-layer {
+     width: 90%;
+     animation: loadingSkill3 2s;
+
+}
+
+.section-head h2:after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px; 
+    left: 0;
+    z-index: -1; 
+    
+}
+
+.section-head{
+     width: fit-content ;
+     margin: auto;
+     font-family: var(--main-font);
+}
+.section-head h2{
+     width: fit-content ;
+     margin: auto;
+     z-index:999;
+}
+.services-card {
+  background-color: white;
+  box-shadow: 1px 1px 10px rgb(196, 195, 195, 0.5);
+}
+.services-card > div {
+  width: 3.75rem;
+  height: 3.75rem;
+  font-size: 1.5625rem;
+  margin: auto;
+  background-color: rgb(225, 225, 255, 0.5);
+  transition: all 400ms;
+}
+.services-card > div i {
+  transition: all 400ms;
+}
+.services-card:hover > div {
+  background-color: black;
+}
+.services-card:hover > div i {
+  color: white;
+}
+/* ======portfolio=====> */
+
+.nav-underline .nav-link.active, .nav-pills .show>.nav-link {
+    color: black;
+}
+.nav-underline .nav-link{
+    color: black;
+}
+.nav-underline , .tab-content{
+    width: fit-content;
+    margin: auto;
+}
+.portfolio-card{
+    transition: all 4s;
+}
+.portfolio-card-layer{
+    width: 97%;
+    height: 97%;
+    display: flex;
+    transition: all 600ms;
+    opacity: 0;
+
+}
+.portfolio-card:hover .portfolio-card-layer{
+    opacity: 1;
+}
+.portfolio-card-layer >div{
+    width: 40px;
+    height: 40px;
+}
+#portfolio i{
+    color: white;
+    
+}
+
+/* =====style of carousel=====> */
+
+
+
+.carousel-item img {
+  width: 90px;
+}
+.carousel-indicators [data-bs-target] {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+  margin-top: 20px;
+}
+/* =====testmonial counter Style====> */
+
+
+
+.testmoinal-counter {
+  background-color: white;
+}
+/* ======teams style===> */
+.teams.row > * {
+  padding-right: 0;
+  padding-left: 0;
+}
+.teams-card-layer {
+  width: 97%;
+  height: 97%;
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms 300ms;
+}
+.teams-card-img img{
+    transition: transform 300ms ;
+}
+.teams-card-layer >div{
+width: 40px;
+height: 40px;
+}
+/* teams card in hover=====> */
+
+
+.teams-card-img:hover .teams-card-layer{
+    transform: rotateY(360deg);
+    visibility: visible;}
+
+.teams-card-img:hover img{
+    transform: scale(1.1,1.1);
+}
+.teams-card:hover .teams-card-layer{
+    transform: rotateY(360deg);
+    visibility: visible;
+}
+
+/* =====style of form====> */
+
+
+.contact-icon{
+    width: 3.125rem;
+    height: 3.125rem;
+    background-color: rgb(248,249,250 );
+    transition: all 400ms;
+
+}
+.contact-item:hover .contact-icon{
+    background-color: black;
+}
+.contact-item:hover i{
+    color: white;
+}
+
+
+#contact form input,textarea {
+    outline: none;
+    border: 0;
+}
+/* ======style of footer=====> */
+footer p{
+    color: #748182;
+    font-size: 14px;
+}
+/* =====animation of typing in header section */
+@keyframes typing {
+  1% {
+    content: "I AM|";
+  }
+  2% {
+    content: "I AM L|";
+  }
+  3% {
+    content: "I AM I AM La|";
+  }
+  4% {
+    content: "I AM Lar|";
+  }
+  5% {
+    content: "I AM Larr|";
+  }
+  6% {
+    content: "I AM Larry|";
+  }
+  7% {
+    content: "I AM Larry D|";
+  }
+  8% {
+    content: "I AM Larry Da|";
+  }
+  9% {
+    content: "I AM Larry Dan|";
+  }
+  10% {
+    content: "I AM Larry Dani|";
+  }
+  11% {
+    content: "I AM Larry Danie|";
+  }
+  12% {
+    content: "I AM Larry Daniel|";
+  }
+  13% {
+    content: "I AM Larry Daniels|";
+  }
+  14% {
+    content: "I AM Larry Danil|";
+  }
+  15% {
+    content: "I AM Larry Dani|";
+  }
+  16% {
+    content: "I AM Larry Dan|";
+  }
+  17% {
+    content: "I AM Larry Da|";
+  }
+  18% {
+    content: "I AM Larry D|";
+  }
+  19% {
+    content: "I AM Larry|";
+  }
+  20% {
+    content: "I AM Larr|";
+  }
+  21% {
+    content: "I AM Lar|";
+  }
+  22% {
+    content: "I AM La|";
+  }
+  23% {
+    content: "I AM L|";
+  }
+  24% {
+    content: "I AM |";
+  }
+  25% {
+    content: "I AM D|";
+  }
+  26% {
+    content: "I AM De|";
+  }
+  27% {
+    content: "I AM Dev|";
+  }
+  28% {
+    content: "I AM Deve|";
+  }
+  29% {
+    content: "I AM Devel|";
+  }
+  30% {
+    content: "I AM Develo|";
+  }
+  31% {
+    content: "I AM Develop|";
+  }
+  32% {
+    content: "I AM Develope|";
+  }
+  33% {
+    content: "I AM Developer|";
+  }
+  34% {
+    content: "I AM Develope|";
+  }
+  35% {
+    content: "I AM Develop|";
+  }
+  36% {
+    content: "I AM Develo|";
+  }
+  37% {
+    content: "I AM Devel|";
+  }
+  38% {
+    content: "I AM Deve|";
+  }
+  39% {
+    content: "I AM Dev|";
+  }
+  40% {
+    content: "I AM De|";
+  }
+  41% {
+    content: "I AM D|";
+  }
+  42% {
+    content: "I AM |";
+  }
+  43% {
+    content: "I AM D|";
+  }
+  44% {
+    content: "I AM De|";
+  }
+  45% {
+    content: "I AM Des|";
+  }
+  46% {
+    content: "I AM Desi|";
+  }
+  47% {
+    content: "I AM Desig|";
+  }
+  48% {
+    content: "I AM Design|";
+  }
+  49% {
+    content: "I AM Designe|";
+  }
+  51% {
+    content: "I AM Designer|";
+  }
+  52% {
+    content: "I AM Designe|";
+  }
+  53% {
+    content: "I AM Design|";
+  }
+  54% {
+    content: "I AM Desig|";
+  }
+  55% {
+    content: "I AM Desi|";
+  }
+  56% {
+    content: "I AM Des|";
+  }
+  57% {
+    content: "I AM De|";
+  }
+  58% {
+    content: "I AM D|";
+  }
+  59% {
+    content: "I AM |";
+  }
+  60% {
+    content: "I AM |";
+  }
+  61% {
+    content: "I AM L|";
+  }
+  62% {
+    content: "I AM La|";
+  }
+  63% {
+    content: "I AM Lar|";
+  }
+  64% {
+    content: "I AM Larr|";
+  }
+  65% {
+    content: "I AM Larry|";
+  }
+  66% {
+    content: "I AM Larry D|";
+  }
+  67% {
+    content: "I AM Larry Da|";
+  }
+  68% {
+    content: "I AM Larry Dan|";
+  }
+  69% {
+    content: "I AM Larry Dani|";
+  }
+  70% {
+    content: "I AM Larry Danie|";
+  }
+  71% {
+    content: "I AM Larry Daniel|";
+  }
+  72% {
+    content: "I AM Larry Daniels|";
+  }
+  73% {
+    content: "I AM Larry Danil|";
+  }
+  74% {
+    content: "I AM Larry Dani|";
+  }
+  75% {
+    content: "I AM Larry Dan|";
+  }
+  76% {
+    content: "I AM Larry Da|";
+  }
+  77% {
+    content: "I AM Larry D|";
+  }
+  78% {
+    content: "I AM Larry|";
+  }
+  79% {
+    content: "I AM Larr|";
+  }
+  80% {
+    content: "I AM Lar|";
+  }
+  81% {
+    content: "I AM La|";
+  }
+  82% {
+    content: "I AM L|";
+  }
+  83% {
+    content: "I AM |";
+  }
+  84% {
+    content: "I AM D|";
+  }
+  85% {
+    content: "I AM De|";
+  }
+  86% {
+    content: "I AM Dev|";
+  }
+  87% {
+    content: "I AM Deve|";
+  }
+  88% {
+    content: "I AM Devel|";
+  }
+  89% {
+    content: "I AM Develo|";
+  }
+  90% {
+    content: "I AM Develop|";
+  }
+  91% {
+    content: "I AM Develope|";
+  }
+  92% {
+    content: "I AM Developer|";
+  }
+  93% {
+    content: "I AM Develope|";
+  }
+  94% {
+    content: "I AM Develop|";
+  }
+  95% {
+    content: "I AM Develo|";
+  }
+  96% {
+    content: "I AM Devel|";
+  }
+  97% {
+    content: "I AM Deve|";
+  }
+  98% {
+    content: "I AM Dev|";
+  }
+  99% {
+    content: "I AM De|";
+  }
+  100% {
+    content: "I AM |";
+  }
+}
+/* ====animation of loading skill in about section */
+@keyframes loadingSkill1{
+    1%{
+width: 0;
+    }
+    100%{
+        width: 95%;
+    }
+}
+@keyframes loadingSkill2{
+    1%{
+width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes loadingSkill3{
+    1%{
+width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+}
